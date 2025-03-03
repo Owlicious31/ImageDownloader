@@ -1,5 +1,4 @@
 import os
-import datetime as dt
 import requests
 from bs4 import BeautifulSoup
 
