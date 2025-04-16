@@ -14,16 +14,11 @@ def download_directory_exists(download_dir: str | None) -> bool:
     :param download_dir: The directory downloads will be saved to.
     :return: bool
     """
-    if not download_dir:
+    if not download_dir or not os.path.exists(download_dir):
         if not os.path.exists("./downloads"):
             os.mkdir("./downloads")
         return False
-
-    elif not os.path.exists(download_dir):
-        if not os.path.exists("./downloads"):
-            os.mkdir("./downloads")
-        return False
-    
+        
     else:
         return True
 
